@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mohammed Saad's Portfolio</title>
+  <style>
+    :root {
+      --primary: #1976d2;
+      --background: #f4f4f4;
+      --card-bg: #ffffff;
+      --text: #333;
+      --border: #ddd;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--background);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: var(--primary);
+      padding: 1em;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 1em;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      transform: translateY(-2px);
+    }
+
+    section {
+      padding: 3em 1em;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: var(--primary);
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 0.3em;
+      margin-bottom: 1em;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      padding: 1.5em;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      margin-bottom: 2em;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .btn {
+      padding: 0.5em 1em;
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #1565c0;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 0.6em;
+      margin: 0.5em 0;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      background: #fff;
+      padding: 0.5em;
+      margin: 0.5em 0;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .product-card {
+      border: 1px solid var(--border);
+      padding: 1em;
+      border-radius: 6px;
+      background: white;
+      margin-bottom: 1em;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2em 1em;
+      color: #777;
+      background-color: white;
+    }
+    
+    .error {
+      color: red;
+      font-size: 0.8em;
+    }
+    
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1em;
+      margin-top: 1em;
+    }
+    
+    .contact-method {
+      background: white;
+      padding: 1em;
+      border-radius: 6px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    
+    .contact-method a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    .contact-method a:hover {
+      text-decoration: underline;
+      color: #0d47a1;
+    }
+
+    .project-highlight {
+      background-color: #f8f9fa;
+      padding: 1em;
+      border-left: 4px solid var(--primary);
+      margin: 1em 0;
+    }
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5em;
+      margin: 1em 0;
+    }
+
+    .tech-tag {
+      background-color: #e3f2fd;
+      color: var(--primary);
+      padding: 0.3em 0.6em;
+      border-radius: 20px;
+      font-size: 0.8em;
+      font-weight: bold;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 1em;
+      margin-top: 1em;
+    }
+
+    .feature-list {
+      margin: 1em 0;
+    }
+
+    .feature-list li {
+      position: relative;
+      padding-left: 1.5em;
+      cursor: default;
+      border: none;
+      background: transparent;
+    }
+
+    .feature-list li:before {
+      content: "✓";
+      color: var(--primary);
+      position: absolute;
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <a href="#todo">To-Do App</a>
+    <a href="#products">Products</a>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+      <h3>Hello, I'm Mohammed Saad</h3>
+      <p>I'm a passionate developer with expertise in web development and automation. I love creating efficient solutions to everyday problems through code.</p>
+      <p>With experience in both frontend and backend technologies, I specialize in building responsive web applications and automating repetitive tasks. My goal is to create software that makes people's lives easier and more productive.</p>
+      <div class="tech-stack">
+        <span class="tech-tag">HTML5</span>
+        <span class="tech-tag">CSS3</span>
+        <span class="tech-tag">JavaScript</span>
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">Automation</span>
+        <span class="tech-tag">Web Development</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Projects Section -->
+  <section id="projects">
+    <h2>My Projects</h2>
+    
+    <!-- Automated File Organizer -->
+    <div class="card">
+      <h3>Automated File Organizer in Python</h3>
+      
+      <div class="project-highlight">
+        <p>🚀 <strong>Project Showcase:</strong> This Python script automatically sorts files into organized folders based on their extensions, eliminating the chaos of mixed file types in your directories.</p>
+      </div>
+      
+      <h4>💡 The Problem It Solves:</h4>
+      <ul class="feature-list">
+        <li>Eliminates cluttered folders by automatically sorting files</li>
+        <li>Saves hours of manual organization work</li>
+        <li>Reduces frustration when searching for specific files</li>
+      </ul>
+      
+      <h4>⚙️ How It Works:</h4>
+      <ol>
+        <li>Set your target directory path</li>
+        <li>The script scans all files in the directory</li>
+        <li>Creates category folders (Documents, Images, Archives, etc.)</li>
+        <li>Moves files to their appropriate folders based on extension</li>
+      </ol>
+      
+      <h4>✅ Key Benefits:</h4>
+      <ul class="feature-list">
+        <li>Fully customizable file type categories</li>
+        <li>Lightning fast execution</li>
+        <li>No dependencies - runs with standard Python libraries</li>
+        <li>Can be scheduled to run automatically</li>
+      </ul>
+      
+      <div class="tech-stack">
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">OS Module</span>
+        <span class="tech-tag">File Handling</span>
+        <span class="tech-tag">Automation</span>
+      </div>
+      
+      <div class="project-links">
+        <a class="btn" href="https://www.linkedin.com/posts/mohammed-saad-tech_python-automation-filemanagement-activity-7331359446536798209-CJTz" target="_blank">Watch Demo</a>
+        <a class="btn" href="#todo">Try To-Do App</a>
+        <a class="btn" href="#products">View Products</a>
+      </div>
+    </div>
+    
+    
+      
+      
+      
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="card">
+      <div class="contact-info">
+        <div class="contact-method">
+          <h3>Email</h3>
+          <a href="mailto:555mohammedsaad@gmail.com">555mohammedsaad@gmail.com</a>
+        </div>
+        <div class="contact-method">
+          <h3>Phone</h3>
+          <p>+91-9963058044</p>
+        </div>
+        <div class="contact-method">
+          <h3>LinkedIn</h3>
+          <a href="https://www.linkedin.com/in/mohammed-saad-tech" target="_blank">linkedin.com/in/mohammed-saad-tech</a>
+        </div>
+      </div>
+      
+      <h3 style="margin-top: 2em;">Send a Message</h3>
+      <form id="contactForm" onsubmit="return validateForm()">
+        <input type="text" id="name" placeholder="Your Name" />
+        <span class="error" id="nameError"></span>
+
+        <input type="email" id="email" placeholder="Your Email" />
+        <span class="error" id="emailError"></span>
+
+        <textarea id="message" placeholder="Your Message" rows="5"></textarea>
+        <span class="error" id="messageError"></span>
+
+        <button class="btn" type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- To-Do List Section -->
+  <section id="todo">
+    <h2>To-Do List App</h2>
+    <div class="card">
+      <p>This interactive To-Do List demonstrates my JavaScript skills with local storage functionality. Try adding and removing tasks!</p>
+      <input type="text" id="taskInput" placeholder="Add a task..." />
+      <button class="btn" onclick="addTask()">Add Task</button>
+      <ul id="taskList"></ul>
+      <div class="project-links" style="margin-top: 1em;">
+        <a class="btn" href="#projects">View Other Projects</a>
+        <a class="btn" href="#products">View Products</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Listing Section -->
+  <section id="products">
+    <h2>Product Listing</h2>
+    <div class="card">
+      <p>This interactive product showcase demonstrates filtering and sorting capabilities. Try changing the options below!</p>
+      <label>Filter:
+        <select id="filter" onchange="renderProducts()">
+          <option value="all">All</option>
+          <option value="tech">Tech</option>
+          <option value="clothing">Clothing</option>
+        </select>
+      </label>
+      <label>Sort:
+        <select id="sort" onchange="renderProducts()">
+          <option value="rating">Rating</option>
+          <option value="price">Price</option>
+        </select>
+      </label>
+      <div id="productList"></div>
+      <div class="project-links" style="margin-top: 1em;">
+        <a class="btn" href="#projects">View Other Projects</a>
+        <a class="btn" href="#todo">Try To-Do App</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>© 2025 Mohammed Saad. All rights reserved.</footer>
+
+  <script>
+    // To-Do List
+    function loadTasks() {
+      const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+      const taskList = document.getElementById('taskList');
+      taskList.innerHTML = '';
+      tasks.forEach((task, index) => {
+        const li = document.createElement('li');
+        li.textContent = task;
+        li.onclick = () => removeTask(index);
+        taskList.appendChild(li);
+      });
+    }
+
+    function addTask() {
+      const taskInput = document.getElementById('taskInput');
+      const task = taskInput.value.trim();
+      if (task) {
+        const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+        tasks.push(task);
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+        taskInput.value = '';
+        loadTasks();
+      }
+    }
+
+    function removeTask(index) {
+      const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+      tasks.splice(index, 1);
+      localStorage.setItem('tasks', JSON.stringify(tasks));
+      loadTasks();
+    }
+
+    // Product Listing
+    const products = [
+      { name: 'Laptop', category: 'tech', price: 999, rating: 4.5 },
+      { name: 'Headphones', category: 'tech', price: 199, rating: 4.7 },
+      { name: 'T-Shirt', category: 'clothing', price: 25, rating: 4.2 },
+    ];
+
+    function renderProducts() {
+      const filter = document.getElementById('filter').value;
+      const sort = document.getElementById('sort').value;
+      let filtered = filter === 'all' ? products : products.filter(p => p.category === filter);
+
+      if (sort === 'price') {
+        filtered.sort((a, b) => a.price - b.price);
+      } else {
+        filtered.sort((a, b) => b.rating - a.rating);
+      }
+
+      const list = document.getElementById('productList');
+      list.innerHTML = '';
+      filtered.forEach(p => {
+        list.innerHTML += `
+          <div class="product-card">
+            <h3>${p.name}</h3>
+            <p>Category: ${p.category}</p>
+            <p>Price: $${p.price}</p>
+            <p>Rating: ${p.rating}/5</p>
+          </div>
+        `;
+      });
+    }
+
+    // Contact Form Validation
+    function validateForm() {
+      let isValid = true;
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      document.getElementById('nameError').textContent = '';
+      document.getElementById('emailError').textContent = '';
+      document.getElementById('messageError').textContent = '';
+
+      if (!name) {
+        document.getElementById('nameError').textContent = 'Name is required.';
+        isValid = false;
+      }
+      if (!email.includes('@')) {
+        document.getElementById('emailError').textContent = 'Valid email is required.';
+        isValid = false;
+      }
+      if (!message) {
+        document.getElementById('messageError').textContent = 'Message is required.';
+        isValid = false;
+      }
+
+      if (isValid) {
+        alert('Message sent successfully!');
+        document.getElementById('contactForm').reset();
+      }
+
+      return false;
+    }
+
+    window.onload = () => {
+      loadTasks();
+      renderProducts();
+    };
+  </script>
+</body>
+</html>
